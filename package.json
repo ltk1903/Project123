@@ -1,0 +1,8 @@
+{
+  "name": "realtime-monorepo",
+  "private": true,
+  "workspaces": [
+    "Backend",
+    "Frontend"
+  ]
+}
