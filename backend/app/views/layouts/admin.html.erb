@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard</title>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload' %>
+  <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-  <header>
-    <h1>Admin Panel</h1>
-  </header>
-  <%= yield %>
+  <div id="admin-wrapper">
+    <%= render 'layouts/shared/sidebar' %>
+    <div id="admin-content-wrapper" class="d-flex flex-column">
+      <div id="admin-content">
+        <%= render 'layouts/shared/navbar' %>
+        <%= yield %>
+      </div>
+      <%= render 'layouts/shared/footer' %>
+    </div>
+  </div>
+  <%= render 'layouts/shared/script' %>
 </body>
 </html>
